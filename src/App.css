@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: pink;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  height: 200px;
 }
 
 .App-link {
@@ -35,4 +35,63 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.chocolate-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.chocolate-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* --- Modal Container (Top Middle Positioning) --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Dim background */
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: flex-start;  /* Aligns to the top */
+  padding-top: 40px;        /* Adds a nice gap from the very top of the screen */
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Base centering for text inside the modal */
+}
+
+/* --- Bolding Specific Fields --- */
+.modal-calories, 
+.modal-ingredients {
+  font-weight: 700; /* Makes Calories and Ingredients header bold */
+}
+
+/* --- Correctly Centered Ingredient List --- */
+.ingredients-list {
+  list-style-position: inside; /* Keeps bullet points neatly aligned with the centered text */
+  padding-left: 0;             /* Removes default browser left-padding */
+  margin: 12px 0;
+  text-align: center;          /* Centers the list items text */
+}
+
+.ingredients-list li {
+  margin-bottom: 6px;
 }
